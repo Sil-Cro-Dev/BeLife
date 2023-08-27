@@ -8,20 +8,16 @@ import {env_theme} from "../../../theme/theme";
 export class SidebarComponent implements OnInit {
 
   theme = env_theme
-  menu = menu
 
   isOpened: boolean = false;
   navbar: HTMLElement | null = null;
   content: HTMLElement | null = null;
-  elementLists: HTMLCollectionOf<Element> | undefined;
-  elementTitle: HTMLCollectionOf<Element> | undefined;
+
 
 
   ngOnInit(): void {
     this.navbar = document.getElementById("parent-navbar");
     this.content = document.getElementById("content");
-    this.elementLists = document.getElementsByClassName("element-list");
-    this.elementTitle = document.getElementsByClassName("element-title");
   }
 
   toggleNavbar() {
@@ -32,8 +28,6 @@ export class SidebarComponent implements OnInit {
   changeAttributes() {
     this.changeAttributesNavbar();
     this.changeAttributesContent();
-    this.changeAttributeElementList();
-    this.changeAttributeElementTitle();
   }
 
   changeAttributesNavbar() {
@@ -61,51 +55,5 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  changeAttributeElementList() {
-    if (this.elementLists) {
-      if (!this.isOpened) {
-        for (let i = 0; i < this.elementLists.length; i++) {
-          this.elementLists[i].classList.remove("border-t", "border-neutral-500/60", "last:border-b")
-        }
-      } else {
-        for (let i = 0; i < this.elementLists.length; i++) {
-          this.elementLists[i].classList.add("border-t", "border-neutral-500/60", "last:border-b")
-        }
-      }
-    }
-  }
-
-  changeAttributeElementTitle() {
-    if (this.elementTitle) {
-      if (!this.isOpened) {
-        for (let i = 0; i < this.elementTitle.length; i++) {
-          this.elementTitle[i].classList.remove("block")
-          this.elementTitle[i].classList.add("hidden")
-        }
-      } else {
-        for (let i = 0; i < this.elementTitle.length; i++) {
-          this.elementTitle[i].classList.remove("hidden")
-          this.elementTitle[i].classList.add("block")
-        }
-      }
-
-    }
-  }
 
 }
-
-export const
-  menu = [{
-    icon: "aspectsCode",
-    title: "ciao"
-  },
-    {
-      icon: "aspectsCommandLine",
-      title: "ciao 2"
-    },
-    {
-      icon: "aspectsShopBasket",
-      title: "ciao 3"
-    },
-  ]
-

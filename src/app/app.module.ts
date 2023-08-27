@@ -10,6 +10,10 @@ import {NgIconsModule} from "@ng-icons/core";
 import {aspectsCode, aspectsCommandLine, aspectsShopBasket} from "@ng-icons/ux-aspects";
 import {LogoComponent} from './layout/logo/logo.component';
 import {bootstrapChevronDoubleRight} from "@ng-icons/bootstrap-icons";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { MenuComponent } from './layout/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,14 @@ import {bootstrapChevronDoubleRight} from "@ng-icons/bootstrap-icons";
     DashboardComponent,
     StudyComponent,
     LogoComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgIconsModule.withIcons({aspectsCode, aspectsCommandLine, aspectsShopBasket, bootstrapChevronDoubleRight})
+    NgIconsModule.withIcons({aspectsCode, aspectsCommandLine, aspectsShopBasket, bootstrapChevronDoubleRight}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

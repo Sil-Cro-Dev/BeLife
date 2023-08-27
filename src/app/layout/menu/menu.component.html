@@ -1,0 +1,11 @@
+<ul class="w-full h-full">
+  <li *ngFor="let element of menu"
+      class="flex justify-around items-center w-full h-16 py-2 element-list
+             grayscale duration-500 hover:grayscale-0 hover:bg-purple-300">
+
+    <ng-icon name="{{element.icon}}" color="purple" size="2rem"></ng-icon>
+
+    <a routerLink="#" class="text-xl font-bold hidden element-title"><span>{{element.title}}</span></a>
+
+  </li>
+</ul>

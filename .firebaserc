@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "belife-97b25": {
+      "hosting": {
+        "BeLife": [
+          "belife-97b25"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "belife-97b25"
+  }
+}
