@@ -29,10 +29,11 @@
       sm:shadow-md
       sm:shadow-neutral-900
       sm:overflow-hidden
-      shadow-inner
-      shadow-black
+      sm:border-t-0
       {{theme.backdrop_white_glass_style}}
-      overflow-auto">
+     border-neutral-900
+     border-t
+     overflow-auto">
 
       <logo [isOpened]="isOpened" class="sm:w-full sm:block hidden"></logo>
       <side-menu [isOpened]="isOpened" class="w-full"></side-menu>
@@ -50,7 +51,7 @@
        id="content">
 
     <div class="
-      h-full
+      sm:h-full
       w-full
       px-4
       py-8
