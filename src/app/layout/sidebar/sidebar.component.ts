@@ -45,9 +45,9 @@ export class SidebarComponent implements OnInit {
     if (this.content) {
       if (!this.isOpened) {
         this.content.classList.remove("sm:ml-auto", "sm:w-10/12");
-        this.content.classList.add("sm:ml-24");
+        this.content.classList.add("sm:ml-24","sm:w-full");
       } else {
-        this.content.classList.remove("sm:ml-24");
+        this.content.classList.remove("sm:ml-24", "sm:w-full");
         this.content.classList.add("sm:ml-auto", "sm:w-10/12");
       }
     }

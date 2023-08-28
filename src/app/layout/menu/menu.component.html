@@ -10,8 +10,9 @@
   <li *ngFor="let element of menu"
       class="
       flex
-      sm:justify-around
+      sm:justify-center
       sm:items-center
+      sm:gap-8
       sm:w-full
       sm:h-16
       sm:py-2
@@ -20,17 +21,18 @@
       sm:duration-500
       sm:hover:grayscale-0
       hover:bg-purple-300
-
       h-full
       w-16
       p-4
       items-center
 
-      element-list">
+      element-list"
+      routerLink="{{element.path}}"
+    >
 
     <ng-icon name="{{element.icon}}" color="purple" size="2rem"></ng-icon>
 
-    <a routerLink="#" class="
+    <a  class="
       sm:text-xl
       sm:font-bold
       sm:hidden

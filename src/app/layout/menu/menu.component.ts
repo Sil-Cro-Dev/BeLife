@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {routesMenu} from "../../app-routing.module";
 
 @Component({
   selector: 'side-menu',
@@ -7,7 +8,7 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
 export class MenuComponent implements OnInit, OnChanges {
 
   @Input() isOpened: boolean = false;
-  menu = menu
+  menu = routesMenu
   elementLists: HTMLCollectionOf<Element> | undefined;
   elementTitle: HTMLCollectionOf<Element> | undefined;
 
@@ -25,11 +26,13 @@ export class MenuComponent implements OnInit, OnChanges {
     if (this.elementLists) {
       if (!this.isOpened) {
         for (let i = 0; i < this.elementLists.length; i++) {
-          this.elementLists[i].classList.remove("border-t", "border-neutral-500/60", "last:border-b")
+          this.elementLists[i].classList.remove("sm:justify-start", "sm:px-4", "border-t", "border-neutral-500/60", "last:border-b")
+          this.elementLists[i].classList.add("sm:justify-center")
         }
       } else {
         for (let i = 0; i < this.elementLists.length; i++) {
-          this.elementLists[i].classList.add("border-t", "border-neutral-500/60", "last:border-b")
+          this.elementLists[i].classList.remove("sm:justify-center")
+          this.elementLists[i].classList.add("sm:justify-start", "sm:px-4", "border-t", "border-neutral-500/60", "last:border-b")
         }
       }
     }
@@ -53,19 +56,4 @@ export class MenuComponent implements OnInit, OnChanges {
   }
 
 }
-
-export const
-  menu = [{
-    icon: "aspectsCode",
-    title: "ciao"
-  },
-    {
-      icon: "aspectsCommandLine",
-      title: "ciao 2"
-    },
-    {
-      icon: "aspectsShopBasket",
-      title: "ciao 3"
-    },
-  ]
 
