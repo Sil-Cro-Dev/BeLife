@@ -14,7 +14,6 @@ import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
 import {provideFirestore, getFirestore} from '@angular/fire/firestore';
 import {MenuComponent} from './layout/menu/menu.component';
-import {MapComponent} from './component/map/map.component';
 import {matDashboard} from "@ng-icons/material-icons/baseline";
 
 @NgModule({
@@ -25,7 +24,6 @@ import {matDashboard} from "@ng-icons/material-icons/baseline";
     StudyComponent,
     LogoComponent,
     MenuComponent,
-    MapComponent,
   ],
   imports: [
     BrowserModule,
