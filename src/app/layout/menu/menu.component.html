@@ -1,11 +1,43 @@
-<ul class="w-full h-full">
+<ul class="
+  flex
+  sm:flex-col
+  sm:gap-0
+  sm:h-full
+  w-full
+  h-16
+  flex-row">
+
   <li *ngFor="let element of menu"
-      class="flex justify-around items-center w-full h-16 py-2 element-list
-             grayscale duration-500 hover:grayscale-0 hover:bg-purple-300">
+      class="
+      flex
+      sm:justify-around
+      sm:items-center
+      sm:w-full
+      sm:h-16
+      sm:py-2
+      sm:p-0
+      sm:grayscale
+      sm:duration-500
+      sm:hover:grayscale-0
+      hover:bg-purple-300
+
+      h-full
+      w-16
+      p-4
+      items-center
+
+      element-list">
 
     <ng-icon name="{{element.icon}}" color="purple" size="2rem"></ng-icon>
 
-    <a routerLink="#" class="text-xl font-bold hidden element-title"><span>{{element.title}}</span></a>
+    <a routerLink="#" class="
+      sm:text-xl
+      sm:font-bold
+      sm:hidden
+      hidden
+      element-title">
+      <span>{{element.title}}</span>
+    </a>
 
   </li>
 </ul>

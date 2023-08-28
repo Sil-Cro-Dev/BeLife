@@ -30,6 +30,7 @@ import { MenuComponent } from './layout/menu/menu.component';
     NgIconsModule.withIcons({aspectsCode, aspectsCommandLine, aspectsShopBasket, bootstrapChevronDoubleRight}),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

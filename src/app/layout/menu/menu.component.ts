@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
-  selector: 'menu',
+  selector: 'side-menu',
   templateUrl: './menu.component.html',
 })
 export class MenuComponent implements OnInit, OnChanges {
@@ -39,13 +39,13 @@ export class MenuComponent implements OnInit, OnChanges {
     if (this.elementTitle) {
       if (!this.isOpened) {
         for (let i = 0; i < this.elementTitle.length; i++) {
-          this.elementTitle[i].classList.remove("block")
-          this.elementTitle[i].classList.add("hidden")
+          this.elementTitle[i].classList.remove("sm:block")
+          this.elementTitle[i].classList.add("sm:hidden")
         }
       } else {
         for (let i = 0; i < this.elementTitle.length; i++) {
-          this.elementTitle[i].classList.remove("hidden")
-          this.elementTitle[i].classList.add("block")
+          this.elementTitle[i].classList.remove("sm:hidden")
+          this.elementTitle[i].classList.add("sm:block")
         }
       }
 

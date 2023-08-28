@@ -13,8 +13,6 @@ export class SidebarComponent implements OnInit {
   navbar: HTMLElement | null = null;
   content: HTMLElement | null = null;
 
-
-
   ngOnInit(): void {
     this.navbar = document.getElementById("parent-navbar");
     this.content = document.getElementById("content");
@@ -33,12 +31,12 @@ export class SidebarComponent implements OnInit {
   changeAttributesNavbar() {
     if (this.navbar) {
       if (!this.isOpened) {
-        this.navbar.classList.remove("w-2/12");
-        this.navbar.classList.add("w-24");
+        this.navbar.classList.remove("sm:w-2/12");
+        this.navbar.classList.add("sm:w-24");
         this.navbar.style.transition = "width 200ms ease-out"
       } else {
-        this.navbar?.classList.remove("w-24");
-        this.navbar?.classList.add("w-2/12");
+        this.navbar?.classList.remove("sm:w-24");
+        this.navbar?.classList.add("sm:w-2/12");
       }
     }
   }
@@ -46,11 +44,11 @@ export class SidebarComponent implements OnInit {
   changeAttributesContent() {
     if (this.content) {
       if (!this.isOpened) {
-        this.content.classList.remove("ml-auto", "w-10/12");
-        this.content.classList.add("ml-24");
+        this.content.classList.remove("sm:ml-auto", "sm:w-10/12");
+        this.content.classList.add("sm:ml-24");
       } else {
-        this.content.classList.remove("ml-24");
-        this.content.classList.add("ml-auto", "w-10/12");
+        this.content.classList.remove("sm:ml-24");
+        this.content.classList.add("sm:ml-auto", "sm:w-10/12");
       }
     }
   }

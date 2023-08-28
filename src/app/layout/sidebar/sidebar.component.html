@@ -1,21 +1,57 @@
-<div class="w-24 h-full p-2 fixed ease-linear duration-200" id="parent-navbar" (mouseenter)="toggleNavbar()"
-     (mouseleave)="toggleNavbar()">
+<div class="h-full w-full flex flex-col-reverse sm:flex-row">
 
-  <nav
-    class="flex flex-col items-center w-full h-full px-4 py-8 rounded-lg shadow-md shadow-neutral-900 {{theme.backdrop_white_glass_style}} overflow-auto">
-
-    <logo [isOpened]="isOpened" class="w-full"></logo>
-
-    <menu [isOpened]="isOpened" class="w-full"></menu>
-
-  </nav>
-</div>
-
-
-<div class="h-full p-2 ml-24" id="content">
   <div class="
+      sm:w-24
+      sm:h-full
+      sm:p-2
+      sm:fixed
+      sm:ease-linear
+      sm:duration-200
+
       w-full
+      bg-opacity-0"
+
+
+       id="parent-navbar"
+       (mouseenter)="toggleNavbar()"
+       (mouseleave)="toggleNavbar()">
+
+    <nav
+      class="
+      sm:flex
+      sm:flex-col
+      sm:items-center
+      sm:w-full
+      sm:h-full
+      sm:px-4
+      sm:py-8
+      sm:rounded-lg
+      sm:shadow-md
+      sm:shadow-neutral-900
+      sm:overflow-hidden
+      shadow-inner
+      shadow-black
+      {{theme.backdrop_white_glass_style}}
+      overflow-auto">
+
+      <logo [isOpened]="isOpened" class="sm:w-full sm:block hidden"></logo>
+      <side-menu [isOpened]="isOpened" class="w-full"></side-menu>
+
+    </nav>
+  </div>
+
+
+  <div class="
+    p-2
+    sm:h-full
+    sm:ml-24
+    sm:overflow-hidden
+    overflow-auto"
+       id="content">
+
+    <div class="
       h-full
+      w-full
       px-4
       py-8
       rounded-lg
@@ -23,9 +59,8 @@
       shadow-neutral-900
       overflow-auto
       {{theme.backdrop_white_glass_style}}">
-
-    <ng-content></ng-content>
+      <ng-content></ng-content>
+    </div>
   </div>
+
 </div>
-
-
