@@ -16,6 +16,7 @@ import {provideFirestore, getFirestore} from '@angular/fire/firestore';
 import {MenuComponent} from './layout/menu/menu.component';
 import {MapComponent} from './component/map/map.component';
 import {matDashboard} from "@ng-icons/material-icons/baseline";
+import {NgxMapLibreGLModule} from "@maplibre/ngx-maplibre-gl";
 
 @NgModule({
   declarations: [
@@ -36,8 +37,9 @@ import {matDashboard} from "@ng-icons/material-icons/baseline";
       aspectsShopBasket,
       bootstrapChevronDoubleRight,
       aspectsMapLocation,
-      matDashboard
+      matDashboard,
     }),
+    NgxMapLibreGLModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
 

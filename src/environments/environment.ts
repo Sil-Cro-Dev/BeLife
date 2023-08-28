@@ -8,4 +8,7 @@ export const environment = {
     authDomain: 'belife-97b25.firebaseapp.com',
     messagingSenderId: '1037673041522',
     measurementId: 'G-0EZB6VVTJM',
-  },}
+  },
+  mapKey: "XF7RdhpyWSfwVCfPaGvF"
+
+}

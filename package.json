@@ -19,10 +19,13 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@maplibre/ngx-maplibre-gl": "^15.0.0",
     "@ng-icons/akar-icons": "^25.2.0",
     "@ng-icons/bootstrap-icons": "^25.2.0",
     "@ng-icons/core": "^24.0.0",
+    "@ng-icons/material-icons": "^25.2.0",
     "@ng-icons/ux-aspects": "^24.0.0",
+    "maplibre-gl": "^3.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

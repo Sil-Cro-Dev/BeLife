@@ -11,4 +11,5 @@ export const environment = {
   },
   production: false,
 
+  mapKey: "XF7RdhpyWSfwVCfPaGvF"
 };
