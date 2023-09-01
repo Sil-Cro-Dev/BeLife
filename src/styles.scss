@@ -12,7 +12,7 @@ html, body {
   background-image: url("assets/theme/bg_bggenerator_com.png");
   /* mobile viewport bug fix */
   height: -webkit-fill-available;
-  height: fill-available;
+  height: stretch;
 }
 
 .gradient-icon {
@@ -20,4 +20,11 @@ html, body {
   background: linear-gradient(90deg, rgba(198, 168, 229, 1) 0%, rgba(94, 36, 153, 1) 100%);
   -webkit-background-clip: content-box;
   color: transparent;
+}
+
+
+@layer components {
+  .input-text {
+    @apply relative h-11 w-full min-w-[200px]
+  }
 }

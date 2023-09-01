@@ -1,0 +1,24 @@
+<!--<div [formGroup]="myFormGroup">-->
+<!--  <s-input-->
+
+<!--    [color]="'green'"-->
+
+<!--    [inputType]="'STATIC'"-->
+
+
+<!--    [label]="'ciao'"-->
+<!--    [field]="myFormGroup.get('customInput')"-->
+<!--  ></s-input>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;<s-input [label]="'standard'" [inputType]="'STANDARD'"></s-input>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<s-input [label]="'standard'" [inputType]="'OUTLINE'"></s-input>&ndash;&gt;-->
+
+
+<div [formGroup]="myFormGroup">
+  <text-input label="Package Name" [field]="myFormGroup.get('customInput')"></text-input>
+</div>
+
+{{value}}

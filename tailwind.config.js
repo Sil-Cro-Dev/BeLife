@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'padding-t': 'padding-top',
+        'margin-t': 'margin-top',
+      },
+    },
   },
   plugins: [],
 }

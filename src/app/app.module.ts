@@ -7,14 +7,18 @@ import {SidebarComponent} from './layout/sidebar/sidebar.component';
 import {DashboardComponent} from './component/dashboard/dashboard.component';
 import {StudyComponent} from './component/study/study.component';
 import {NgIconsModule} from "@ng-icons/core";
-import {aspectsCode, aspectsCommandLine, aspectsShopBasket, aspectsMapLocation} from "@ng-icons/ux-aspects";
+import {aspectsCode, aspectsCommandLine, aspectsMapLocation, aspectsShopBasket} from "@ng-icons/ux-aspects";
 import {LogoComponent} from './layout/logo/logo.component';
 import {bootstrapChevronDoubleRight} from "@ng-icons/bootstrap-icons";
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
-import {provideFirestore, getFirestore} from '@angular/fire/firestore';
+import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 import {MenuComponent} from './layout/menu/menu.component';
+import {ModelGeneratorComponent} from './component/model-generator/model-generator.component';
+import {InputComponent} from './component/common/input/input.component';
+import {ReactiveFormsModule} from "@angular/forms";
 import {matDashboard} from "@ng-icons/material-icons/baseline";
+import { TextInputComponent } from './component/common/input/text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import {matDashboard} from "@ng-icons/material-icons/baseline";
     StudyComponent,
     LogoComponent,
     MenuComponent,
+    ModelGeneratorComponent,
+    InputComponent,
+    TextInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,7 @@ import {matDashboard} from "@ng-icons/material-icons/baseline";
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
 
   ],
   providers: [],
