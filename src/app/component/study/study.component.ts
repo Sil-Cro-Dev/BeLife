@@ -7,20 +7,6 @@ import {env_theme} from "../../../theme/theme";
   styleUrls: ['./study.component.scss']
 })
 export class StudyComponent {
-  theme = env_theme
-
-  menu = [{
-    icon: "code.svg",
-    title: "ciao"
-  },
-    {
-      icon: "code.svg",
-      title: "ciao 2"
-    },
-    {
-      icon: "code.svg",
-      title: "ciao 3"
-    },
-  ]
+  theme: any = env_theme;
 
 }

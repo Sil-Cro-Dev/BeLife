@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {LayoutService} from "./layout/layout.service";
+import {env_theme} from "../theme/theme";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import {LayoutService} from "./layout/layout.service";
 export class AppComponent {
 
   title = 'BeLife';
+  theme = env_theme
 
   constructor(private layoutService: LayoutService) {
   }

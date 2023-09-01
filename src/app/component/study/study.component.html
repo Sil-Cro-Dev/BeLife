@@ -1,24 +1,28 @@
-<nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="logo">
-      <a class="nav-link">
-        <span class="link-text">BeLife</span>
-        <img src="/assets/logo/a-panda-writing-pc.svg" alt="">
-      </a>
-    </li>
+<div class="w-full h-full p-4" id="container">
 
-    <li class="nav-item" *ngFor="let element of menu">
-      <a href="#" class="nav-link">
-        <img src="/assets/theme/icons/{{element.icon}}" alt="">
-        <span class="link-text">{{element.title}}</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+  <div class="
+  w-full
+  h-full
+  p-4
+  rounded-2xl
+  {{theme.backdrop_white_glass_style}}
+  overflow-auto"
+       id="sidebar">
+    dove sono
+  </div>
+
+  <div class="
+  w-full
+  h-full
+  p-4
+  rounded-2xl
+  {{theme.backdrop_white_glass_style}}
+  overflow-auto"
+       id="content">
+    dove sono
+  </div>
 
 
-<div class="main">
-  <ng-content></ng-content>
 </div>
 
 
