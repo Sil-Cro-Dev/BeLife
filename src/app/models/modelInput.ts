@@ -3,17 +3,16 @@ export interface ModelInput {
   className: string;
 }
 
-export enum AttributesType {
-  int,
-  long,
-  double,
-  float,
-  short,
-  boolean,
-  Date,
-  String,
-  LocalDate
-}
+export const ATTRIBUTE_TYPES =
+  ["INT",
+    "LONG",
+    "DOUBLE",
+    "FLOAT",
+    "SHORT",
+    "BOOLEAN",
+    "DATE",
+    "STRING",
+    "LOCALDATE"]
 
 export enum Libraries {
   lombok

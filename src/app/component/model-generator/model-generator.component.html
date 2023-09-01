@@ -1,24 +1,37 @@
-<!--<div [formGroup]="myFormGroup">-->
-<!--  <s-input-->
-
-<!--    [color]="'green'"-->
-
-<!--    [inputType]="'STATIC'"-->
+<div [formGroup]="myFormGroup" class="flex flex-col gap-4 w-full">
 
 
-<!--    [label]="'ciao'"-->
-<!--    [field]="myFormGroup.get('customInput')"-->
-<!--  ></s-input>-->
-<!--</div>-->
+  <div class="flex flex-row w-full">
+    <text-input label="Package Name" [field]="myFormGroup.get('packageName')" [required]="true"
+                class="w-full"></text-input>
+    <text-input label="Class Name" [field]="myFormGroup.get('className')" class="w-full"></text-input>
+  </div>
 
 
-<!--&lt;!&ndash;<s-input [label]="'standard'" [inputType]="'STANDARD'"></s-input>&ndash;&gt;-->
+  <div [formGroup]="attributes" class="flex flex-row w-full">
 
-<!--&lt;!&ndash;<s-input [label]="'standard'" [inputType]="'OUTLINE'"></s-input>&ndash;&gt;-->
+    <text-input label="Attribute Name"
+                [field]="attributes.get('attributeName')"></text-input>
+
+    <select-input label="Attribute Type"
+                  class="w-full"
+                  [options]="attributeTypes"
+                  [field]="attributes.get('attributeType')"></select-input>
+
+    <button (click)="addAttribute()">add attributes</button>
+
+  </div>
 
 
-<div [formGroup]="myFormGroup">
-  <text-input label="Package Name" [field]="myFormGroup.get('customInput')"></text-input>
 </div>
 
-{{value}}
+<!--<div>-->
+<!--  <div>-->
+<!--    Nome Pacchetto:  {{value.packageName}}-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    Nome Classe: {{value.className}}-->
+<!--  </div>-->
+
+<!--  <button (click)="test()">click me</button>-->
+<!--</div>-->

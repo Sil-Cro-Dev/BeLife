@@ -2,15 +2,16 @@ import {Component, Input} from '@angular/core';
 import {AbstractControl, FormControl} from "@angular/forms";
 
 @Component({
-  selector: 'text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  selector: 'select-input',
+  templateUrl: './select-input.component.html',
+  styleUrls: ['./select-input.component.scss']
 })
-export class TextInputComponent {
+export class SelectInputComponent {
 
   @Input() label: string = 'label';
-  @Input() required = false;
+  @Input() options: string[] = [];
 
+  value?: string;
 
   _field!: FormControl;
   @Input()

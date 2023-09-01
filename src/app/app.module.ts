@@ -18,7 +18,9 @@ import {ModelGeneratorComponent} from './component/model-generator/model-generat
 import {InputComponent} from './component/common/input/input.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {matDashboard} from "@ng-icons/material-icons/baseline";
-import { TextInputComponent } from './component/common/input/text-input/text-input.component';
+import {TextInputComponent} from './component/common/input/text-input/text-input.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { SelectInputComponent } from './component/common/input/select-input/select-input.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { TextInputComponent } from './component/common/input/text-input/text-inp
     ModelGeneratorComponent,
     InputComponent,
     TextInputComponent,
+    SelectInputComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { TextInputComponent } from './component/common/input/text-input/text-inp
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

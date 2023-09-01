@@ -1,8 +1,9 @@
 <div class="p-2 w-full">
   <div class="relative float-label-input w-full">
-    <input type="text" id="input" placeholder=" "
-           [formControl]="_field"
-           class="
+
+    <select id="input"
+            [formControl]="_field"
+            class="
          block
          w-full
          bg-white
@@ -15,10 +16,13 @@
          leading-normal
          focus:outline-none
          focus:shadow-outline">
-
-    <label for="input"
-           id="label"
-           class="
+      <option value=""></option>
+      <option *ngFor="let option of options" value="{{option}}"> {{option}}</option>
+    </select>
+    <label
+      for="input"
+      id="label"
+      class="
          absolute
          top-3
          left-0
@@ -29,6 +33,6 @@
          duration-200
          ease-out
          text-gray-400
-         text-grey-darker">{{required ? label.concat('*') : label }}</label>
+         text-grey-darker">{{label}}</label>
   </div>
 </div>
