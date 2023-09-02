@@ -1,0 +1,18 @@
+#itemList:first-child {
+}
+
+#itemList:last-child {
+}
+
+@media screen and (max-width: 600px) {
+  #list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.uno {
+}
+
+.due {
+}

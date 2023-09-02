@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {AfterViewInit, Component, HostListener, OnInit} from '@angular/core';
 import {LayoutService} from "./layout/layout.service";
 import {env_theme} from "../theme/theme";
 
@@ -7,7 +7,7 @@ import {env_theme} from "../theme/theme";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
   title = 'BeLife';
   theme = env_theme
@@ -19,6 +19,10 @@ export class AppComponent {
     this.layoutService.getScreenWidth = window.innerWidth;
     this.layoutService.getScreenHeight = window.innerHeight;
   }
+
+  ngAfterViewInit() {
+  }
+
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {

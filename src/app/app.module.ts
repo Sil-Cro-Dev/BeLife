@@ -16,6 +16,9 @@ import {MenuComponent} from './layout/menu/menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {SidebarComponent} from "./layout/sidebar/sidebar.component";
+import {StudyMenuComponent} from './component/study-menu/study-menu.component';
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import {SidebarComponent} from "./layout/sidebar/sidebar.component";
     StudyComponent,
     LogoComponent,
     MenuComponent,
+    StudyMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import {SidebarComponent} from "./layout/sidebar/sidebar.component";
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
     MatSidenavModule,
-
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

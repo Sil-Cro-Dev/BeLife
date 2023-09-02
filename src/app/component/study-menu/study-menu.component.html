@@ -1,0 +1,36 @@
+<div class="w-full">
+
+  <mat-list id="list">
+
+    <mat-list-item
+      class="
+
+      sm:grayscale
+      sm:duration-500
+      sm:hover:grayscale-0
+      hover:bg-purple-300
+
+       sm:border-t
+       border-neutral-500/60
+       sm:last:border-b-0
+       sm:last:rounded-b-lg
+       sm:first:border-t-0
+       sm:first:rounded-t-lg
+
+
+      {{isMobile ? 'uno' : 'due'}}"
+
+
+      *ngFor="let voice of menu"
+      id="itemList">
+
+      <div class="flex flex-row w-full items-center gap-4">
+        <ng-icon name="aspectsCommandLine" color="purple" size="2rem"></ng-icon>
+        <div>{{voice}}</div>
+      </div>
+
+    </mat-list-item>
+  </mat-list>
+
+</div>
+

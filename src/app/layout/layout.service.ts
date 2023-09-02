@@ -6,6 +6,4 @@ import {Injectable} from '@angular/core';
 export class LayoutService {
   getScreenWidth: any;
   getScreenHeight: any;
-
-
 }
