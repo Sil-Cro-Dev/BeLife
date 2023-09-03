@@ -2,19 +2,7 @@
 
 
   <div *ngFor="let voice of menu" [routerLink]="voice.path"
-       class=""
-       id="itemList">
-
-    <div class="
-      w-16
-      h-16
-      p-2
-      sm:flex
-      sm:flex-row
-      sm:gap-4
-      sm:p-2
-      sm:items-center
-
+       class="
       sm:grayscale
       sm:duration-500
       sm:hover:grayscale-0
@@ -24,17 +12,25 @@
       sm:last:rounded-b-lg
       sm:first:border-t-0
       sm:first:rounded-t-lg
+       hover:bg-purple-300"
+       id="itemList">
 
-      hover:bg-purple-300"
+    <div class="
+      w-12
+      h-12
+      p-2
+      sm:flex
+      sm:flex-row
+      sm:gap-4
+      sm:p-2
+      sm:items-center
+      "
          id="item">
 
-      <ng-icon name="{{voice.icon}}" color="purple" size="{{isMobile? '3rem' : '2.5rem'}}" id="icon"></ng-icon>
+      <ng-icon name="{{voice.icon}}" color="purple" size="{{isMobile? '2rem' : '2.5rem'}}" id="icon"></ng-icon>
       <div *ngIf="!isMobile" class="pointer-events-none">{{voice.title}}</div>
 
     </div>
-
-
-
 
 
   </div>
