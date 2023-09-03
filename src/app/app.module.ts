@@ -19,6 +19,7 @@ import {SidebarComponent} from "./layout/sidebar/sidebar.component";
 import {StudyMenuComponent} from './component/study-menu/study-menu.component';
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
+import {matDashboard} from "@ng-icons/material-icons/baseline";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {MatIconModule} from "@angular/material/icon";
       aspectsShopBasket,
       bootstrapChevronDoubleRight,
       aspectsMapLocation,
+      matDashboard
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),

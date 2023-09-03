@@ -22,6 +22,11 @@ export const routesMenu = [
     icon: "matDashboard",
   },
   {
+    path: "model",
+    title: "Model Generator",
+    icon: "aspectsCode",
+  },
+  {
     path: "map",
     title: "Maps",
     icon: "aspectsMapLocation",

@@ -1,18 +1,27 @@
-#itemList:first-child {
+#list {
+  display: flex;
+  flex-direction: column;
 }
 
-#itemList:last-child {
+#itemList {
+
 }
+
+#icon {
+}
+
 
 @media screen and (max-width: 600px) {
+
   #list {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    align-items: center;
   }
-}
 
-.uno {
-}
+  #item {
+    border-radius: 0.5rem;
+  }
 
-.due {
 }

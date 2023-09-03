@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BreakpointObserver} from "@angular/cdk/layout";
+import {routesMenu} from "../../app-routing.module";
 
 @Component({
   selector: 'app-study-menu',
@@ -9,7 +10,7 @@ import {BreakpointObserver} from "@angular/cdk/layout";
 export class StudyMenuComponent implements OnInit {
 
   isMobile: boolean = false;
-  menu: any = ["ciao", "ciao3", "ciao2"];
+  menu = routesMenu;
 
   constructor(private obs: BreakpointObserver) {
   }
