@@ -18,6 +18,7 @@ import {SidebarComponent} from "./layout/sidebar/sidebar.component";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {matDashboard} from "@ng-icons/material-icons/baseline";
+import { ModelGeneratorComponent } from './component/model-generator/model-generator.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {matDashboard} from "@ng-icons/material-icons/baseline";
     DashboardComponent,
     LogoComponent,
     MenuComponent,
+    ModelGeneratorComponent,
   ],
   imports: [
     BrowserModule,

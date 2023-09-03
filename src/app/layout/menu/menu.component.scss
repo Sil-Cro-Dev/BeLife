@@ -1,3 +1,8 @@
+.active {
+  filter: grayscale(0);
+  background-color: rgb(192 132 252);
+}
+
 #list {
   display: flex;
   flex-direction: column;
@@ -15,5 +20,6 @@
   #itemList {
     border-radius: 0.5rem;
   }
+
 
 }
