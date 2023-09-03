@@ -1,44 +1,39 @@
-<ul class="
-  flex
-  sm:flex-col
-  sm:gap-0
-  sm:h-full
-  w-full
-  h-16
-  flex-row">
+<div class="w-full h-full" id="list">
 
-  <li *ngFor="let element of menu"
-      class="
-      flex
-      sm:justify-center
-      sm:items-center
-      sm:gap-8
-      sm:w-full
-      sm:h-16
-      sm:p-0
+
+  <div *ngFor="let voice of menu" [routerLink]="voice.path"
+       class="
       sm:grayscale
       sm:duration-500
       sm:hover:grayscale-0
-      hover:bg-purple-300
-      h-full
-      w-16
-      p-4
-      items-center
-      rounded-lg
+      sm:border-t
+      sm:border-neutral-500/60
+      sm:last:border-b-0
+      sm:last:rounded-b-lg
+      sm:first:border-t-0
+      sm:first:rounded-t-lg
+       hover:bg-purple-300"
+       id="itemList">
 
-      element-list"
-      routerLink="{{element.path}}">
+    <div class="
+      w-12
+      h-12
+      p-2
+      sm:flex
+      sm:flex-row
+      sm:gap-4
+      sm:p-2
+      sm:items-center
+      "
+         id="item">
 
-    <ng-icon name="{{element.icon}}" color="purple" size="2rem"></ng-icon>
+      <ng-icon name="{{voice.icon}}" color="purple" size="{{isMobile? '2rem' : '2.5rem'}}" id="icon"></ng-icon>
+      <div *ngIf="!isMobile" class="pointer-events-none">{{voice.title}}</div>
 
-    <a class="
-      sm:text-xl
-      sm:font-bold
-      sm:hidden
-      hidden
-      element-title">
-      <span>{{element.title}}</span>
-    </a>
+    </div>
 
-  </li>
-</ul>
+
+  </div>
+
+</div>
+

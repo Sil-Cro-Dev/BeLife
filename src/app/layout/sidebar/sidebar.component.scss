@@ -1,0 +1,31 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#sidebarContainer {
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+
+  #container {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  #sidebar {
+    border-radius: 0;
+    height: 5rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #content {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: calc(100% - 1rem);
+  }
+}
